@@ -35,6 +35,6 @@ The website is built with responsiveness in mind, ensuring that it looks great a
 ## Technologies Used
 
 - **HTML5**: For structuring the content of the website.
-- **CSS3**: For styling the website and implementing responsive design.
+- **TailwindCSS**: For styling the website and implementing responsive design.
 - **JavaScript**: For adding interactivity and manipulating the DOM.
 
