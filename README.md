@@ -1,8 +1,8 @@
-# VR Studio Website
+# VR Space Website
 
 ## Overview
 
-This repository contains the HTML and CSS code for the official VR Studio website. VR Studio is a virtual reality content creation company, and this website serves as the digital front for showcasing its products, services, and creations. The website is designed to be fully responsive, ensuring a seamless user experience across various devices.
+This repository contains the HTML and CSS code for the VR Space website. VR Space is a virtual reality content creation company, and this website serves as the digital front for showcasing its products, services, and creations. The website is designed to be fully responsive, ensuring a seamless user experience across various devices.
 
 ## Features
 
