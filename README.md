@@ -18,10 +18,6 @@ The hero section introduces VR Space with a captivating background image, a welc
 
 In this section, visitors can learn more about VR Space, its mission, and its values. It includes text content and images arranged in a clean and engaging layout.
 
-### Services Section
-
-This section showcases the various services offered by VR Space. Each service is represented with an icon, a title, and a brief description. The services are laid out in a grid format for easy readability.
-
 ### Creations Section
 
 The Creations section highlights the space’s portfolio with a gallery of work. Each creation is presented with an image and a title. The gallery is divided into two containers, each holding four items, ensuring a balanced and aesthetically pleasing layout. The images have hover effects for interactivity, and there are separate images for desktop and mobile views.
