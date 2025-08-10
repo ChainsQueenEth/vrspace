@@ -16,16 +16,23 @@
         hover:text-white;
     }
     .nav-link {
-        @apply text-2xl font-bold text-navBarItemColor;
+        @apply text-2xl font-bold text-white/90 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 rounded-sm;
     }
     .mob-nav-link {
-        @apply font-bold hover:text-mobNavItemColor;
+        @apply font-bold text-white/90 hover:text-white transition-colors duration-200;
     }
     .underline-hover-desktop {
         @apply mx-2 group-hover:border-b group-hover:border-navBarItemColor;
     }
     .underline-hover-footer {
         @apply group-hover:border-b group-hover:border-white;
+    }
+    /* Lighter menu colors when links are within the hero */
+    #hero .nav-link {
+        @apply text-white/95 hover:text-white;
+    }
+    #hero .underline-hover-desktop {
+        @apply group-hover:border-white;
     }
 }
 
@@ -49,7 +56,23 @@
     background-image: url('../images/desktop/image-hero.png');
     background-repeat: no-repeat;
     background-size: cover;
-    
+    position: relative;
+    color: #fff;
+}
+
+/* Dark gradient overlay for readability */
+#hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.55) 100%);
+    pointer-events: none;
+}
+
+/* Ensure hero content sits above overlay */
+.hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -59,8 +82,10 @@
     #hero {
         background-image: url('../images/mobile/image-hero.png');
         background-position: center;
-      
-    } 
+    }
+    #hero::before {
+        background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.6) 100%);
+    }
 }
 
 /*Hamburger Menu*/
