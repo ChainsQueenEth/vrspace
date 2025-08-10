@@ -1,5 +1,8 @@
 # VR Space Website
 
+[![Deploy to GitHub Pages](https://github.com/ChainsQueenEth/vrspace/actions/workflows/deploy-pages.yml/badge.svg?branch=main)](https://github.com/ChainsQueenEth/vrspace/actions/workflows/deploy-pages.yml)
+
+
 ## Overview
 
 This repository contains the HTML, CSS, and JavaScript code for the VR Space website. VR Space is a virtual reality content creation company, and this website serves as the digital front for showcasing its products, services, and creations. The website is designed to be fully responsive, ensuring a seamless user experience across various devices.
