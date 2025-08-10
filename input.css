@@ -15,6 +15,18 @@
         uppercase text-2xl border-2 border-black font-alata hover:bg-black 
         hover:text-white;
     }
+    .nav-link {
+        @apply text-2xl font-bold text-navBarItemColor;
+    }
+    .mob-nav-link {
+        @apply font-bold hover:text-mobNavItemColor;
+    }
+    .underline-hover-desktop {
+        @apply mx-2 group-hover:border-b group-hover:border-navBarItemColor;
+    }
+    .underline-hover-footer {
+        @apply group-hover:border-b group-hover:border-white;
+    }
 }
 
 .item-container {

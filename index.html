@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Alata&family=Caladea:wght@400;700&family=Great+Vibes&family=Josefin+Sans:wght@300&family=Spectral:wght@400;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+    <script type="module" src="js/main.js"></script>
 
     <title>VR Space</title>
 </head>
@@ -26,44 +26,11 @@
                 <!--Logo-->
                 <h1 class="text-3xl text-pink-400">VR Space</h1>
                 <!--Menu-->
-                <div class="hidden h-15  font-alata md:flex md:space-x-8">
-                    <!--Menu item1-->
-                    <div class="group">
-                        <a href="#" class="text-2xl font-bold text-navBarItemColor">
-                            About</a>
-                        <div class="mx-2 group-hover:border-b group-hover:border-navBarItemColor">
-                        </div>
-                    </div>
-                    <!--Menu item2-->
-                    <div class="group">
-                        <a href="#" class="text-2xl font-bold text-navBarItemColor">
-                            Products</a>
-                        <div class="mx-2 group-hover:border-b group-hover:border-navBarItemColor">
-                        </div>
-                    </div>
-                    <!--Menu item3-->
-                    <div class="group">
-                        <a href="#" class="text-2xl font-bold text-navBarItemColor" >Events</a>
-                        <div class="mx-2 group-hover:border-b group-hover:border-navBarItemColor">
-                        </div>
-                    </div>
-                    <!--Menu item4-->
-                    <div class="group">
-                        <a href="#" class="text-2xl font-bold text-navBarItemColor">Careers</a>
-                        <div class="mx-2 group-hover:border-b group-hover:border-navBarItemColor">
-                        </div>
-                    </div>
-                    <!--Menu item5-->
-                    <div class="group">
-                        <a href="#" class="text-2xl font-bold text-navBarItemColor">Support</a>
-                        <div class="mx-2 group-hover:border-b group-hover:border-navBarItemColor">
-                        </div>
-                    </div>
-                </div>
+                <div id="desktop-menu" class="hidden h-15  font-alata md:flex md:space-x-8"></div>
                 <!--Hamburger Button-->
 
                 <div class="md:hidden">
-                    <button id="menu-btn" type="button" class="z-40 block hamburger md:hidden focus:outline-none">
+                    <button id="menu-btn" type="button" class="z-40 block hamburger md:hidden focus:outline-none" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="hamburger-top"></span>
                         <span class="hamburger-middle"></span>
                         <span class="hamburger-bottom"></span>
@@ -74,16 +41,10 @@
             </nav>
 
             <!--Mobile Menu-->
-            <div id="menu" class="absolute top-0 bottom-0 left-0 
+            <div id="menu" role="menu" aria-hidden="true" class="absolute top-0 bottom-0 left-0 
             hidden flex-col self-end  w-full min-h-screen py-1 
             pt-20 pl-12 space-y-2 text-lg text-white uppercase bg-slate-300
-            bg-opacity-20">
-                <a href="#" class="font-bold hover:text-mobNavItemColor">About</a>
-                <a href="#" class="font-bold hover:text-mobNavItemColor">Products</a>
-                <a href="#" class="font-bold hover:text-mobNavItemColor">Events</a>
-                <a href="#" class="font-bold hover:text-mobNavItemColor">Careers</a>
-                <a href="#" class="font-bold hover:text-mobNavItemColor">Support</a>
-            </div>
+            bg-opacity-20"></div>
 
             <div
                 class="flex justify-center mt-96">
@@ -141,148 +102,10 @@
             </div>
 
             <!--Items Container 1-->
-            <div class="item-container">
-                <!--Item 1-->
-                <div class="group item">
-
-                    <!--Desktop Image-->
-                    <img src="images/desktop/image-street-fight.png" alt="" class="hidden 
-                     w-full duration-200 md:block group-hover:scale-110" />
-
-                    <!--Mobile Image-->
-                    <img src="images/mobile/image-street-fight.png" alt="" class="w-full md:hidden" />
-
-                    <!--Item Gradient-->
-                    <div class="item-gradient"></div>
-
-                    <!--Item Text-->
-                    <h5>Street Fight</h5>
-
-                </div>
-
-                <!--Item 2-->
-                <div class="group item">
-
-                    <!--Desktop Image-->
-                    <img src="images/desktop/image-the-crown.png" alt="" class="hidden 
-                    w-full duration-200 md:block group-hover:scale-110" />
-
-                    <!--Mobile Image-->
-                    <img src="images/mobile/image-the-crown.png" alt="" class="w-full md:hidden" />
-
-                    <!--Item Gradient-->
-                    <div class="item-gradient"></div>
-
-                    <!--Item Text-->
-                    <h5>The Crown</h5>
-
-                </div>
-                <!--Item 3-->
-                <div class="group item">
-
-                    <!--Desktop Image-->
-                    <img src="images/desktop/image-bullet-echo.png" alt="" class="hidden 
-                     w-full duration-200 md:block group-hover:scale-110" />
-
-                    <!--Mobile Image-->
-                    <img src="images/mobile/image-bullet-echo.png" alt="" class="w-full md:hidden" />
-
-                    <!--Item Gradient-->
-                    <div class="item-gradient"></div>
-
-                    <!--Item Text-->
-                    <h5>Bullet Echo</h5>
-
-                </div>
-                <!--Item 4-->
-                <div class="group item">
-
-                    <!--Desktop Image-->
-                    <img src="images/desktop/image-racing.png" alt="" class="hidden 
-                    w-full duration-200 md:block group-hover:scale-110" />
-
-                    <!--Mobile Image-->
-                    <img src="images/desktop/image-racing.png" alt="" class="w-full md:hidden" />
-
-                    <!--Item Gradient-->
-                    <div class="item-gradient"></div>
-
-                    <!--Item Text-->
-                    <h5>Racing</h5>
-                </div>
-            </div>
+            <div id="creations-group-1" class="item-container"></div>
 
             <!--Items Container 2-->
-            <div class="item-container mt-10">
-                <!--Item 1-->
-                <div class="group item">
-
-                    <!--Desktop Image-->
-                    <img src="images/desktop/image-the-kingdom.png" alt="" class="hidden 
-                w-full duration-200 md:block group-hover:scale-110" />
-
-                    <!--Mobile Image-->
-                    <img src="images/mobile/image-the-kingdom.png" alt="" class="w-full md:hidden" />
-
-                    <!--Item Gradient-->
-                    <div class="item-gradient"></div>
-
-                    <!--Item Text-->
-                    <h5>The Kingdom</h5>
-
-                </div>
-
-                <!--Item 2-->
-                <div class="group item">
-
-                    <!--Desktop Image-->
-                    <img src="images/desktop/image-surfing.png" alt="" class="hidden 
-                w-full duration-200 md:block group-hover:scale-110" />
-
-                    <!--Mobile Image-->
-                    <img src="images/mobile/image-surfing.png" alt="" class="w-full md:hidden" />
-
-                    <!--Item Gradient-->
-                    <div class="item-gradient"></div>
-
-                    <!--Item Text-->
-                    <h5>The Surfing</h5>
-
-                </div>
-                <!--Item 3-->
-                <div class="group item">
-
-                    <!--Desktop Image-->
-                    <img src="images/desktop/image-jungle.png" alt="" class="hidden 
-                 w-full duration-200 md:block group-hover:scale-110" />
-
-                    <!--Mobile Image-->
-                    <img src="images/mobile/image-jungle.png" alt="" class="w-full md:hidden" />
-
-                    <!--Item Gradient-->
-                    <div class="item-gradient"></div>
-
-                    <!--Item Text-->
-                    <h5>The Jungle</h5>
-
-                </div>
-                <!--Item 4-->
-                <div class="group item">
-
-                    <!--Desktop Image-->
-                    <img src="images/desktop/image-the-pirate.png" alt="" class="hidden 
-                w-full duration-200 md:block group-hover:scale-110" />
-
-                    <!--Mobile Image-->
-                    <img src="images/desktop/image-the-pirate.png" alt="" class="w-full md:hidden" />
-
-                    <!--Item Gradient-->
-                    <div class="item-gradient"></div>
-
-                    <!--Item Text-->
-                    <h5>The Pirate</h5>
-                </div>
-            </div>
+            <div id="creations-group-2" class="item-container mt-10"></div>
 
             <!--Bottom Buttom Container-->
             <div class="flex justify-center mt-10 md:hidden">
@@ -309,75 +132,13 @@
                         <h1 class="text-2xl text-pink-400 font-bold md:ml-3">VR Space</h1>
                     </div>
                     <!--Menu Container-->
-                    <div class="flex flex-col items-center space-y-4 font-bold 
-                text-white md:flex-row md:space-y-0 md:space-x-6 md:ml-3">
-                        <!--Item 1-->
-                        <div class="h-10 group">
-                            <a href="#">About</a>
-                            <div class="group-hover:border-b group-hover:border-white">
-
-                            </div>
-                        </div>
-                        <!--Item 2-->
-                        <div class="h-10 group">
-                            <a href="#">Products</a>
-                            <div class="group-hover:border-b group-hover:border-white">
-
-                            </div>
-                        </div>
-                        <!--Item 3-->
-                        <div class="h-10 group">
-                            <a href="#">Events</a>
-                            <div class="group-hover:border-b group-hover:border-white">
-
-                            </div>
-                        </div>
-                        <!--Item 4-->
-                        <div class="h-10 group">
-                            <a href="#">Careers</a>
-                            <div class="group-hover:border-b group-hover:border-white">
-
-                            </div>
-                        </div>
-                        <!--Item 5-->
-                        <div class="h-10 group">
-                            <a href="#">Support</a>
-                            <div class="group-hover:border-b group-hover:border-white">
-
-                            </div>
-                        </div>
-
-                    </div>
+                    <div id="footer-menu" class="flex flex-col items-center space-y-4 font-bold 
+                text-white md:flex-row md:space-y-0 md:space-x-6 md:ml-3"></div>
                 </div>
                 <!--Social @ Copy Container-->
                 <div class="flex flex-col items-start justify-between space-y-4 text-gray-500">
                     <!--Icons Container-->
-                    <div class="flex item-center justify-center mx-auto space-x-4 md:justify-end md:mx-0">
-                        <!--Icon 1-->
-                        <div class="h-8 group">
-                            <a href="#">
-                                <img src="images/desktop/facebook.png" alt="" class="h-6">
-                            </a>
-                        </div>
-                        <!--Icon 2-->
-                        <div class="h-8 group">
-                            <a href="#">
-                                <img src="images/desktop/twitter.png" alt="" class="h-6">
-                            </a>
-                        </div>
-                        <!--Icon 3-->
-                        <div class="h-8 group">
-                            <a href="#">
-                                <img src="images/desktop/pinterest.png" alt="" class="h-6">
-                            </a>
-                        </div>
-                        <!--Icon 4-->
-                        <div class="h-8 group">
-                            <a href="#">
-                                <img src="images/desktop/instagram.png" alt="" class="h-6">
-                            </a>
-                        </div>
-                    </div>
+                    <div id="social-icons" class="flex item-center justify-center mx-auto space-x-4 md:justify-end md:mx-0"></div>
 
                     <!--Copy-->
                     <div class="text-xs">

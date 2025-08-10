@@ -38,3 +38,88 @@ The website is built with responsiveness in mind, ensuring that it looks great a
 - **TailwindCSS**: For styling the website and implementing responsive design.
 - **JavaScript**: For adding interactivity and manipulating the DOM.
 
+## Development
+
+- Build Tailwind CSS once
+
+```sh
+pnpm run build
+```
+
+- Watch Tailwind during development
+
+```sh
+pnpm run watch
+```
+
+Preview locally using a server (ES modules require http):
+
+```sh
+# Option A (recommended): pnpm dev
+pnpm install
+pnpm dev
+# opens http://localhost:5173
+
+# Option B: Python built-in
+python3 -m http.server 5173
+
+# Option C: npx http-server
+npx http-server -p 5173
+```
+
+## Testing
+
+This project uses Vitest with the happy-dom environment for self-testing.
+
+1) Install dev dependencies
+
+```sh
+pnpm add -D vitest happy-dom
+```
+
+2) Run tests once
+
+```sh
+pnpm test
+```
+
+3) Run tests in watch mode
+
+```sh
+pnpm run test:watch
+```
+
+## Architecture Notes
+
+- UI rendering is data-driven via small, reusable modules in `js/`:
+  - `js/data.js` centralizes nav items, creations, and social icons.
+  - `js/dom-utils.js` provides tiny helpers for element creation and DOM ops.
+  - `js/render.js` contains pure render functions for menus, creations, and footer.
+  - `js/script.js` exposes `setupMenuToggle()` to wire the mobile menu.
+  - `js/main.js` bootstraps everything on `DOMContentLoaded`.
+
+- `index.html` now includes empty containers with IDs (e.g., `#desktop-menu`, `#creations-group-1`) that are populated at runtime to eliminate duplicated markup and improve reusability.
+
+
+## Minimal Project Structure
+
+For running the site in the browser, only these are required:
+
+- `index.html`
+- `css/style.css` (built output)
+- `js/`
+  - `main.js`
+  - `render.js`
+  - `script.js`
+  - `dom-utils.js`
+  - `data.js`
+- `input.css` (Tailwind source)
+- `tailwind.config.js`
+- `package.json` (scripts, dev server)
+
+Optional (development/testing only):
+
+- `tests/` and `vitest.config.ts` (for `pnpm test`)
+- `.gitignore`, `.gitattributes` (repo hygiene)
+- `node_modules/` (installed locally via `pnpm install`, not committed)
+

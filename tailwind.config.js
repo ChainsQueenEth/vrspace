@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./*.html'],
+  content: ['./*.html', './js/**/*.js'],
   theme: {
     screens: {
       sm: '480px',
@@ -10,7 +10,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['Josefi Sans', 'sans-serif'],
+        sans: ['Josefin Sans', 'sans-serif'],
         alata: ['Alata'],
       },
       letterSpacing: {
