@@ -123,3 +123,27 @@ Optional (development/testing only):
 - `.gitignore`, `.gitattributes` (repo hygiene)
 - `node_modules/` (installed locally via `pnpm install`, not committed)
 
+
+## Deploy to GitHub Pages (CI)
+
+This repo includes a GitHub Actions workflow at `.github/workflows/deploy-pages.yml` that builds Tailwind (via pnpm) and deploys to GitHub Pages on every push to `main`.
+
+### One-time setup
+
+1. Push the workflow file to GitHub (commit and push your repo).
+2. In your GitHub repo: Settings → Pages → Build and deployment → Source: select "GitHub Actions".
+
+### How it works
+
+- The workflow installs pnpm, runs `pnpm install`, then `pnpm run build` to produce `css/style.css` from `input.css` with Tailwind.
+- It uploads the repository contents as the Pages artifact and publishes it to GitHub Pages.
+
+### After pushing
+
+- Check Actions tab for a successful run: "Deploy to GitHub Pages".
+- Your site URL will be: `https://<your-username>.github.io/<repo-name>/`.
+
+### Notes
+
+- You can choose to commit `css/style.css` or let CI generate it on deploy. If you prefer not to commit built CSS, add `css/style.css` to `.gitignore` and rely on CI.
+- Keep all asset paths in `index.html` relative (e.g., `css/style.css`, `js/main.js`, `images/...`) so Pages serves them correctly.
