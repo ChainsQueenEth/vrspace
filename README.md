@@ -2,6 +2,10 @@
 
 [![Deploy to GitHub Pages](https://github.com/ChainsQueenEth/vrspace/actions/workflows/deploy-pages.yml/badge.svg?branch=main)](https://github.com/ChainsQueenEth/vrspace/actions/workflows/deploy-pages.yml)
 
+[![CI](https://github.com/ChainsQueenEth/web3dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/ChainsQueenEth/web3dashboard/actions/workflows/ci.yml)
+
+[![GitHub Pages](https://img.shields.io/github/deployments/ChainsQueenEth/vrspace/github-pages?label=github%20pages&logo=github)](https://github.com/ChainsQueenEth/vrspace/deployments/github-pages)
+
 
 ## Overview
 
