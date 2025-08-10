@@ -776,6 +776,14 @@ h5 {
   left: 0px;
 }
 
+.left-1\/2 {
+  left: 50%;
+}
+
+.right-1\/2 {
+  right: 50%;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -797,6 +805,14 @@ h5 {
 .my-32 {
   margin-top: 8rem;
   margin-bottom: 8rem;
+}
+
+.-ml-\[50vw\] {
+  margin-left: -50vw;
+}
+
+.-mr-\[50vw\] {
+  margin-right: -50vw;
 }
 
 .mb-20 {
@@ -1040,8 +1056,20 @@ h5 {
   padding-left: 3rem;
 }
 
+.pl-6 {
+  padding-left: 1.5rem;
+}
+
 .pr-0 {
   padding-right: 0px;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
+}
+
+.pr-6 {
+  padding-right: 1.5rem;
 }
 
 .pt-20 {
@@ -1355,6 +1383,10 @@ h5 {
     margin-left: 0.75rem;
   }
 
+  .md\:ml-auto {
+    margin-left: auto;
+  }
+
   .md\:mt-0 {
     margin-top: 0px;
   }
@@ -1437,12 +1469,6 @@ h5 {
     margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
-  .md\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(2rem * var(--tw-space-x-reverse));
-    margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
   .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
@@ -1521,6 +1547,18 @@ h5 {
     padding-bottom: 5rem;
   }
 
+  .md\:pl-8 {
+    padding-left: 2rem;
+  }
+
+  .md\:pr-4 {
+    padding-right: 1rem;
+  }
+
+  .md\:pr-8 {
+    padding-right: 2rem;
+  }
+
   .md\:text-left {
     text-align: left;
   }
@@ -1545,6 +1583,14 @@ h5 {
 @media (min-width: 976px) {
   .lg\:pb-28 {
     padding-bottom: 7rem;
+  }
+
+  .lg\:pr-10 {
+    padding-right: 2.5rem;
+  }
+
+  .lg\:pr-6 {
+    padding-right: 1.5rem;
   }
 
   .lg\:text-6xl {
