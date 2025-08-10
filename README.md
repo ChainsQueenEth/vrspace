@@ -18,7 +18,7 @@ VR Space Website is a responsive, static site that showcases virtual reality cre
 
 ## Overview
 
-This repository contains the HTML, CSS, and JavaScript code for the VR Space website. The site is fully responsive and optimized for readability through semantic HTML, ARIA attributes, and a contrast-enhancing hero overlay.
+VR Space is a modern, responsive website that’s easy to read and use. It includes a polished hero section, a clean right‑aligned menu, and simple, accessible markup so it works well on phones, tablets, and desktops.
 
 ## Project Structure
 
