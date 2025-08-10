@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/ChainsQueenEth/web3dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/ChainsQueenEth/web3dashboard/actions/workflows/ci.yml)
 
-VR Space Website is a responsive, static site that showcases virtual reality creations. The project emphasizes accessibility, reusable UI rendering, and a modern Tailwind CSS workflow with self-tests.
+VR Space is a responsive website design showcasing virtual reality experiences and games. It features a full-bleed hero, a right-aligned navigation menu, and clean, readable layouts across devices.
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ VR Space Website is a responsive, static site that showcases virtual reality cre
 
 ## Overview
 
-VR Space is a modern, responsive website that’s easy to read and use. It includes a polished hero section, a clean right‑aligned menu, and simple, accessible markup so it works well on phones, tablets, and desktops.
+VR Space Website is a responsive, static site that showcases virtual reality creations. The project emphasizes accessibility, reusable UI rendering, and a modern Tailwind CSS workflow with self-tests.
 
 ## Project Structure
 
