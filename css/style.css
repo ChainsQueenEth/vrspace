@@ -1027,8 +1027,8 @@ h5 {
   padding-bottom: 2rem;
 }
 
-.pb-10 {
-  padding-bottom: 2.5rem;
+.pb-12 {
+  padding-bottom: 3rem;
 }
 
 .pl-12 {
@@ -1329,16 +1329,12 @@ h5 {
 }
 
 @media (min-width: 768px) {
-  .md\:absolute {
-    position: absolute;
+  .md\:z-0 {
+    z-index: 0;
   }
 
-  .md\:bottom-0 {
-    bottom: 0px;
-  }
-
-  .md\:right-0 {
-    right: 0px;
+  .md\:z-10 {
+    z-index: 10;
   }
 
   .md\:mx-0 {
@@ -1346,8 +1342,8 @@ h5 {
     margin-right: 0px;
   }
 
-  .md\:-mt-6 {
-    margin-top: -1.5rem;
+  .md\:-mt-2 {
+    margin-top: -0.5rem;
   }
 
   .md\:ml-3 {
@@ -1378,16 +1374,20 @@ h5 {
     max-height: 480px;
   }
 
-  .md\:w-2\/3 {
-    width: 66.666667%;
+  .md\:flex-none {
+    flex: none;
   }
 
-  .md\:max-w-xl {
-    max-width: 36rem;
+  .md\:basis-2\/5 {
+    flex-basis: 40%;
   }
 
-  .md\:translate-x-\[-3rem\] {
-    --tw-translate-x: -3rem;
+  .md\:basis-3\/5 {
+    flex-basis: 60%;
+  }
+
+  .md\:-translate-x-2 {
+    --tw-translate-x: -0.5rem;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
@@ -1397,6 +1397,10 @@ h5 {
 
   .md\:items-start {
     align-items: flex-start;
+  }
+
+  .md\:items-end {
+    align-items: flex-end;
   }
 
   .md\:justify-end {
@@ -1429,6 +1433,10 @@ h5 {
     --tw-space-y-reverse: 0;
     margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+  }
+
+  .md\:self-end {
+    align-self: flex-end;
   }
 
   .md\:rounded {
@@ -1489,8 +1497,8 @@ h5 {
     padding-bottom: 1.5rem;
   }
 
-  .md\:pb-16 {
-    padding-bottom: 4rem;
+  .md\:pb-20 {
+    padding-bottom: 5rem;
   }
 
   .md\:text-left {
@@ -1515,8 +1523,8 @@ h5 {
 }
 
 @media (min-width: 976px) {
-  .lg\:pb-24 {
-    padding-bottom: 6rem;
+  .lg\:pb-28 {
+    padding-bottom: 7rem;
   }
 
   .lg\:text-6xl {
