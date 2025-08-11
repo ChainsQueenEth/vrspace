@@ -1319,19 +1319,45 @@ h5 {
 /* Precisely place the hero card between hands (absolute percentages) */
 .hero-anchor {
   position: absolute;
-  top: 60%;
+  top: 65%;
   left: 46%;
   transform: translate(-50%, -50%);
 }
 @media (min-width: 768px) {
-  .hero-anchor { top: 64%; left: 49%; }
+  .hero-anchor { top: 69%; left: 49%; }
 }
 @media (min-width: 1024px) {
-  .hero-anchor { top: 66%; left: 51%; }
+  .hero-anchor { top: 71%; left: 51%; }
 }
 @media (min-width: 1280px) {
-  .hero-anchor { top: 68%; left: 48%; }
+  .hero-anchor { top: 73%; left: 48%; }
 }
+
+/* Compact the hero overlay content spacing to reduce overall height */
+.hero-anchor > .pointer-events-auto {
+  padding-top: 0.75rem;   /* was ~1.25-1.75rem via utility classes */
+  padding-bottom: 0.75rem;
+}
+@media (min-width: 768px) {
+  .hero-anchor > .pointer-events-auto { padding-top: 1rem; padding-bottom: 1rem; }
+}
+
+.hero-title {
+  line-height: 1.15;      /* tighten heading */
+  margin-bottom: 0.25rem; /* small space below heading */
+}
+
+.hero-subtitle {
+  margin-top: 0.25rem;    /* was mt-3; reduce */
+  line-height: 1.35;      /* tighten subtitle */
+}
+
+/* Reduce top margin before buttons and gap between buttons */
+.hero-anchor .mt-6 { margin-top: 0.75rem !important; }
+@media (min-width: 768px) {
+  .hero-anchor .md\:mt-8 { margin-top: 0.875rem !important; }
+}
+.hero-anchor .gap-4 { gap: 0.75rem; }
 
 
 @media (max-width: 576px) {
