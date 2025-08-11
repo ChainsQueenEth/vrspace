@@ -26,9 +26,7 @@ Key highlights:
 
 ## Demo
 
-Live demo: https://your-demo-url.example.com
-
-(Replace the URL above with your deployed link.)
+Live demo: chainsqueeneth.github.io/vrspace/
 
 ## Project Structure
 
