@@ -10,6 +10,8 @@ export function setupMenuToggle(buttonId = 'menu-btn', menuId = 'menu') {
         const isOpen = btn.classList.contains('open');
         btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+        // Toggle a body state so we can adjust layout on mobile when menu is open
+        document.body.classList.toggle('menu-open', isOpen);
     };
     btn.addEventListener('click', navToggle);
 }
