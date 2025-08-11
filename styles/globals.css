@@ -1320,27 +1320,19 @@ h5 {
 .hero-anchor {
   position: absolute;
   top: 60%;
-  left: 55%;
+  left: 46%;
   transform: translate(-50%, -50%);
 }
 @media (min-width: 768px) {
-  .hero-anchor { top: 64%; left: 58%; }
+  .hero-anchor { top: 64%; left: 49%; }
 }
 @media (min-width: 1024px) {
-  .hero-anchor { top: 66%; left: 60%; }
+  .hero-anchor { top: 66%; left: 51%; }
 }
 @media (min-width: 1280px) {
-  .hero-anchor { top: 68%; left: 57%; }
+  .hero-anchor { top: 68%; left: 48%; }
 }
-@media (min-width: 768px) {
-  .hero-anchor { top: 64%; left: 58%; }
-}
-@media (min-width: 1024px) {
-  .hero-anchor { top: 66%; left: 60%; }
-}
-@media (min-width: 1280px) {
-  .hero-anchor { top: 68%; left: 57%; }
-}
+
 
 @media (max-width: 576px) {
   #hero {
