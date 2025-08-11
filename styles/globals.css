@@ -1359,6 +1359,33 @@ h5 {
 }
 .hero-anchor .gap-4 { gap: 0.75rem; }
 
+/* Brand logo in nav: match footer pink and keep accessible */
+.logo {
+  color: #f472b6; /* same as footer text-pink-400 */
+  text-decoration: none;
+  font-size: 1rem; /* smaller on mobile */
+  font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 500; /* very bold but more natural */
+}
+.logo:focus, .logo:hover {
+  color: #fb7185; /* subtle hover (pink-500) */
+}
+
+/* On mobile/tablet push logo to the right */
+@media (max-width: 1023.98px) {
+  .logo { margin-left: auto; }
+}
+
+/* Bigger logo on md+ to match previous visual weight */
+@media (min-width: 768px) {
+  .logo { font-size: 1.5rem; }
+}
+
+/* Only offset logo on desktop */
+@media (min-width: 1024px) {
+  .logo { margin-left: 10%; }
+}
+
 
 @media (max-width: 576px) {
   #hero {
