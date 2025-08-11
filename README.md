@@ -24,9 +24,11 @@ Key highlights:
 - Mobile drawer toggled by hamburger; hidden by default
 - Accessible ARIA attributes and focus-visible outlines
 
-## Demo
+## 🚀 Live Demo
 
-Live demo: chainsqueeneth.github.io/vrspace/
+[![Live Demo](https://img.shields.io/badge/Live-Demo-0a84ff?style=for-the-badge)](https://chainsqueeneth.github.io/vrspace/)
+
+Direct link: https://chainsqueeneth.github.io/vrspace/
 
 ## Project Structure
 
