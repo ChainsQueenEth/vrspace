@@ -10,7 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Alata&family=Caladea:wght@400;700&family=Great+Vibes&family=Josefin+Sans:wght@300&family=Spectral:wght@400;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles/globals.css">
     <script type="module" src="js/main.js"></script>
 
     <title>VR Space</title>
@@ -18,11 +18,11 @@
 
 <body class="bg-slate-200">
     <!--Hero Section-->
-    <section id="hero">
+    <section id="hero" role="banner">
         <!--Hero Container-->
         <div class="container max-w-6xl pl-6 pr-2 md:pr-4 lg:pr-6 py-8 hero-content relative min-h-[80vh]">
             <!--Logo/Menu Container-->
-            <nav class="flex items-center font-bold text-white drop-shadow-lg w-screen pl-4 md:pl-6 pr-6 md:pr-8 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] z-30">
+            <nav aria-label="Primary" class="flex items-center font-bold text-white drop-shadow-lg w-screen pl-4 md:pl-6 pr-6 md:pr-8 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] z-30">
                 <!--Menu-->
                 <div id="desktop-menu" class="hidden h-15 font-alata md:flex md:ml-auto md:space-x-6"></div>
                 <!--Hamburger Button-->
@@ -44,14 +44,21 @@
             pt-20 pl-12 space-y-2 text-lg text-white uppercase bg-slate-300
             bg-opacity-20"></div>
 
-            <div
-                class="absolute inset-0 flex items-end justify-center px-6 pb-12 md:pb-20 lg:pb-28 pointer-events-none">
-                <div class="pointer-events-auto max-w-3xl font-sans text-3xl md:text-5xl lg:text-6xl text-center text-white leading-tight backdrop-blur-sm border border-white/10 rounded-xl px-5 py-4 md:px-8 md:py-6 shadow-lg bg-gradient-to-t from-black/60 via-black/35 to-black/10 md:from-black/40 md:via-black/25 md:to-black/5 -translate-y-2 md:-translate-y-3">
-                    <h2 class="font-semibold tracking-tight drop-shadow-sm">Journey to Stunning Realities</h2>
+            <!-- Content overlay moved outside container -->
+        </div>
+        <!-- Viewport-wide overlay so placement uses full hero width -->
+        <div class="absolute z-30 px-6 pointer-events-none hero-anchor">
+            <div class="pointer-events-auto max-w-3xl font-sans text-center text-white leading-tight backdrop-blur-sm border border-white/10 rounded-xl px-5 py-5 md:px-8 md:py-7 shadow-lg bg-gradient-to-t from-black/60 via-black/35 to-black/10 md:from-black/40 md:via-black/25 md:to-black/5">
+                <h1 class="hero-title font-semibold tracking-tight drop-shadow-sm">Journey to Stunning Realities</h1>
+                <p class="hero-subtitle mt-3 text-white/90">Immersive virtual experiences that feel natural, responsive, and breathtaking on every device.</p>
+                <div class="mt-6 md:mt-8 flex items-center justify-center gap-4">
+                    <a href="#creations" class="btn-primary">Explore Creations</a>
+                    <a href="#" class="btn-secondary">Watch Demo</a>
                 </div>
-                
             </div>
         </div>
+        <!-- Scroll Cue -->
+        <div class="scroll-cue" aria-hidden="true"></div>
     </section>
 
     <!--Feature Section-->

@@ -57,7 +57,7 @@ vrspace/
 
 Defined in `package.json`:
 
-- `pnpm run build` — Build Tailwind from `input.css` to `css/style.css`.
+- Single-CSS setup: styles are served directly from `styles/globals.css` (no Tailwind build).
 - `pnpm run watch` — Watch and rebuild Tailwind on changes.
 - `pnpm dev` — Start a static server at http://localhost:5173.
 - `pnpm test` — Run tests once with Vitest.
@@ -124,5 +124,5 @@ One-time setup on GitHub:
 2. In the repo: Settings → Pages → Build and deployment → Source: select "GitHub Actions".
 
 Notes:
-- Keep asset paths in `index.html` relative (e.g., `css/style.css`, `js/main.js`, `images/...`).
-- You may commit `css/style.css` or rely on CI to generate it during deploy.
+- Keep asset paths in `index.html` relative (e.g., `styles/globals.css`, `js/main.js`, `images/...`).
+- There is no build step. `styles/globals.css` is the source of truth and is loaded by the browser.

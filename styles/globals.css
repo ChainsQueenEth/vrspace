@@ -679,8 +679,8 @@ h5 {
 
 .nav-link {
   border-radius: 0.125rem;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   font-weight: 700;
   color: rgb(255 255 255 / 0.9);
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
@@ -700,6 +700,13 @@ h5 {
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
   --tw-ring-color: rgb(255 255 255 / 0.5);
+}
+
+@media (min-width: 768px) {
+  .nav-link {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 .mob-nav-link {
@@ -788,6 +795,10 @@ h5 {
   top: 0px;
 }
 
+.z-30 {
+  z-index: 30;
+}
+
 .z-40 {
   z-index: 40;
 }
@@ -829,6 +840,14 @@ h5 {
 
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .block {
@@ -891,13 +910,9 @@ h5 {
   max-width: none;
 }
 
-.-translate-y-2 {
-  --tw-translate-y: -0.5rem;
+.-translate-y-1 {
+  --tw-translate-y: -0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.cursor-pointer {
-  cursor: pointer;
 }
 
 .flex-col {
@@ -906,10 +921,6 @@ h5 {
 
 .items-start {
   align-items: flex-start;
-}
-
-.items-end {
-  align-items: flex-end;
 }
 
 .items-center {
@@ -922,6 +933,10 @@ h5 {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -1038,9 +1053,9 @@ h5 {
   padding-bottom: 2.5rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .py-8 {
@@ -1048,12 +1063,16 @@ h5 {
   padding-bottom: 2rem;
 }
 
-.pb-12 {
-  padding-bottom: 3rem;
+.pb-16 {
+  padding-bottom: 4rem;
 }
 
 .pl-12 {
   padding-left: 3rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }
 
 .pl-6 {
@@ -1138,10 +1157,6 @@ h5 {
   letter-spacing: -0.025em;
 }
 
-.tracking-wide {
-  letter-spacing: 0.025em;
-}
-
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity, 1));
@@ -1155,6 +1170,10 @@ h5 {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-white\/90 {
+  color: rgb(255 255 255 / 0.9);
 }
 
 .underline {
@@ -1181,12 +1200,6 @@ h5 {
   --tw-backdrop-blur: blur(4px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
-
-.transition-colors {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 
 .duration-200 {
@@ -1281,10 +1294,52 @@ h5 {
 }
 
 /* Ensure hero content sits above overlay */
-
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 20;
+}
+
+/* Offset the hero card to sit between the hands (no build needed) */
+.hero-offset {
+  transform: translate(4vw, 3vh);
+}
+@media (min-width: 640px) {
+  .hero-offset { transform: translate(7vw, 4vh); }
+}
+@media (min-width: 768px) {
+  .hero-offset { transform: translate(10vw, 5vh); }
+}
+@media (min-width: 1024px) {
+  .hero-offset { transform: translate(12vw, 6vh); }
+}
+@media (min-width: 1280px) {
+  .hero-offset { transform: translate(16vw, 8vh); }
+}
+
+/* Precisely place the hero card between hands (absolute percentages) */
+.hero-anchor {
+  position: absolute;
+  top: 60%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 768px) {
+  .hero-anchor { top: 64%; left: 58%; }
+}
+@media (min-width: 1024px) {
+  .hero-anchor { top: 66%; left: 60%; }
+}
+@media (min-width: 1280px) {
+  .hero-anchor { top: 68%; left: 57%; }
+}
+@media (min-width: 768px) {
+  .hero-anchor { top: 64%; left: 58%; }
+}
+@media (min-width: 1024px) {
+  .hero-anchor { top: 66%; left: 60%; }
+}
+@media (min-width: 1280px) {
+  .hero-anchor { top: 68%; left: 57%; }
 }
 
 @media (max-width: 576px) {
@@ -1345,11 +1400,6 @@ h5 {
   transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }
 
-.hover\:text-pink-400:hover {
-  --tw-text-opacity: 1;
-  color: rgb(244 114 182 / var(--tw-text-opacity, 1));
-}
-
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1395,6 +1445,10 @@ h5 {
     margin-top: 1rem;
   }
 
+  .md\:mt-8 {
+    margin-top: 2rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -1432,8 +1486,8 @@ h5 {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
-  .md\:-translate-y-3 {
-    --tw-translate-y: -0.75rem;
+  .md\:-translate-y-2 {
+    --tw-translate-y: -0.5rem;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
@@ -1538,17 +1592,17 @@ h5 {
     padding-bottom: 2.5rem;
   }
 
-  .md\:py-6 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+  .md\:py-7 {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
   }
 
   .md\:pb-20 {
     padding-bottom: 5rem;
   }
 
-  .md\:pl-8 {
-    padding-left: 2rem;
+  .md\:pl-6 {
+    padding-left: 1.5rem;
   }
 
   .md\:pr-4 {
@@ -1585,17 +1639,8 @@ h5 {
     padding-bottom: 7rem;
   }
 
-  .lg\:pr-10 {
-    padding-right: 2.5rem;
-  }
-
   .lg\:pr-6 {
     padding-right: 1.5rem;
-  }
-
-  .lg\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
   }
 }
 
