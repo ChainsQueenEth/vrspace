@@ -1,34 +1,39 @@
 # VR Space Website
 
-[![CI](https://github.com/ChainsQueenEth/web3dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/ChainsQueenEth/web3dashboard/actions/workflows/ci.yml)
-
-VR Space is a responsive website design showcasing virtual reality experiences and games. It features a full-bleed hero, a right-aligned navigation menu, and clean, readable layouts across devices.
+VR Space is a responsive single-page site showcasing virtual reality experiences and games. It features a full-bleed hero, polished navigation (desktop and mobile), and professional, readable layouts across devices.
 
 ## Table of Contents
 
 - Overview
+- Demo
 - Project Structure
 - Tech Stack
 - Scripts
 - Local Development
-- Testing
 - Architecture
 - Accessibility
-- Deployment (GitHub Pages)
+- Deployment
 
 ## Overview
 
-VR Space Website is a responsive, static site that showcases virtual reality creations. The project emphasizes accessibility, reusable UI rendering, and a modern Tailwind CSS workflow with self-tests.
+VR Space is a static site with no build step. Styling is authored directly in `styles/globals.css` (no Tailwind build tooling). JavaScript is lightweight, focused on rendering UI pieces and controlling the mobile navigation.
+
+Key highlights:
+- Hero overlay positioned responsively across breakpoints
+- Desktop and mobile menus with consistent styling
+- Mobile drawer toggled by hamburger; hidden by default
+- Accessible ARIA attributes and focus-visible outlines
+
+## Demo
+
+Live demo: https://your-demo-url.example.com
+
+(Replace the URL above with your deployed link.)
 
 ## Project Structure
 
 ```
 vrspace/
-├─ .github/
-│  └─ workflows/
-│     └─ deploy-pages.yml        # GitHub Pages CI (build + deploy)
-├─ css/
-│  └─ style.css                  # Tailwind build output
 ├─ images/                       # Static assets (hero, icons, etc.)
 ├─ js/
 │  ├─ data.js                    # Centralized data for menus, creations, icons
@@ -36,50 +41,39 @@ vrspace/
 │  ├─ main.js                    # App bootstrap on DOMContentLoaded
 │  ├─ render.js                  # Pure render functions for UI pieces
 │  └─ script.js                  # Menu toggle + behavior wiring
-├─ tests/
-│  └─ *.test.js                  # Vitest tests (happy-dom)
+├─ styles/
+│  └─ globals.css                # Single source of truth for all styling
+├─ tests/                        # Optional: DOM behavior tests (if used)
 ├─ index.html                    # Main entry page
-├─ input.css                     # Tailwind source (uses @tailwind, @apply)
-├─ tailwind.config.js            # Tailwind configuration
-├─ package.json                  # Scripts (build, watch, dev, tests)
+├─ package.json                  # Scripts (dev/start using a static server)
 └─ pnpm-lock.yaml                # Lockfile for deterministic installs
 ```
 
 ## Tech Stack
 
 - HTML5 for structure
-- Tailwind CSS for styling (utility-first, component classes via @apply)
+- CSS (no build step) in `styles/globals.css`
 - Vanilla JavaScript for rendering and interactions
-- Vitest + happy-dom for unit testing DOM behavior
 - PNPM for package management
 
 ## Scripts
 
 Defined in `package.json`:
 
-- Single-CSS setup: styles are served directly from `styles/globals.css` (no Tailwind build).
-- `pnpm run watch` — Watch and rebuild Tailwind on changes.
-- `pnpm dev` — Start a static server at http://localhost:5173.
-- `pnpm test` — Run tests once with Vitest.
-- `pnpm run test:watch` — Run tests in watch mode.
+- `pnpm dev` — Start a static server at http://localhost:5173
+- `pnpm start` — Alias to start the static server
 
 ## Local Development
 
-1) Install dependencies
+1) (Optional) Install dependencies — not strictly required for a static server, but keeps workflows consistent
 ```sh
 pnpm install
 ```
 
-2) Start the dev server (recommended)
+2) Start the dev server
 ```sh
 pnpm dev
 # opens http://localhost:5173
-```
-
-3) Build or watch Tailwind
-```sh
-pnpm run build   # one-time build
-pnpm run watch   # watch mode
 ```
 
 Alternative local servers (if needed):
@@ -88,40 +82,22 @@ python3 -m http.server 5173
 npx http-server -p 5173
 ```
 
-## Testing
-
-The project uses Vitest with the happy-dom environment.
-
-Install (if not installed yet):
-```sh
-pnpm add -D vitest happy-dom
-```
-
-Run tests:
-```sh
-pnpm test
-pnpm run test:watch
-```
-
 ## Architecture
 
 - Rendering is data-driven via small, reusable modules in `js/`.
-- `index.html` contains minimal markup and semantic containers (e.g., `#desktop-menu`, `#menu`).
-- `render.js` and `dom-utils.js` keep the DOM creation pure and composable.
+- `index.html` contains semantic containers (e.g., `#desktop-menu`, `#menu`) and hero markup.
+- `render.js` and `dom-utils.js` keep DOM creation pure and composable.
 
 ## Accessibility
 
 - The mobile menu button includes `aria-controls`, `aria-expanded`, and `aria-label`.
 - The menu panel toggles `aria-hidden` and uses appropriate roles for assistive tech.
 - The hero uses a non-interfering overlay to improve text contrast.
+ - Visible focus outlines (`:focus-visible`) for header, footer, mobile menu, and hero links.
 
-## Deployment (GitHub Pages)
+## Deployment
 
-This repository includes a GitHub Actions workflow at `.github/workflows/deploy-pages.yml` that installs dependencies, builds Tailwind, and deploys to GitHub Pages on pushes to `main`.
-
-One-time setup on GitHub:
-1. Push the repository with the workflow file.
-2. In the repo: Settings → Pages → Build and deployment → Source: select "GitHub Actions".
+Any static hosting works (e.g., GitHub Pages, Netlify, Vercel static, S3+CloudFront).
 
 Notes:
 - Keep asset paths in `index.html` relative (e.g., `styles/globals.css`, `js/main.js`, `images/...`).
